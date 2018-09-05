@@ -16,12 +16,19 @@ object floki {
 
 
 object mario {
-	var valorRecolectado = 0
-	
+	var property valorRecolectado = 0
+	var ultimoElemento
 	method encontrar(elemento) {
 	    valorRecolectado += elemento.valorQueOtorga()
 	    elemento.recibirTrabajo()
-	    // ... acá hay que agregar una línea ...
+	    ultimoElemento= elemento// ... acá hay que agregar una línea ...
+	}
+	method esFeliz(){
+		valorRecolectado >=50 or ultimoElemento.altura() >= 10/*o bien recolectó en total al menos 50 unidades, 
+		* o bien el último elemento con el que se encontró mide al menos 10 metros de alto. 
+		 * La acción que falta en el método  encontrar(elemento)  
+		 * es necesaria para poder evaluar esta segunda condición.
+		 */
 	}
 }
 
