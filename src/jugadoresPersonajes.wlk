@@ -1,5 +1,8 @@
 object luisa {
-	var personajeActivo = noHayPersonaje
+	var personajeActivo = floki
+	 method aparece(elemento){
+	 	personajeActivo.encontrar(elemento)
+	 } 
 }
 
 
